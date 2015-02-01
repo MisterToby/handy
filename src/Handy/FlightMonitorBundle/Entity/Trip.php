@@ -33,7 +33,11 @@ class Trip
      * @var \Handy\FlightMonitorBundle\Entity\Airline
      */
     private $triAir;
-
+    
+    public function __toString()
+    {
+        return $this->getTriDescription();
+    }
 
     /**
      * Set triDescription

@@ -1,0 +1,40 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Trip</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Tridescription</th>
+                <td>{{ entity.triDescription }}</td>
+            </tr>
+            <tr>
+                <th>Trifields</th>
+                <td>{{ entity.triFields }}</td>
+            </tr>
+            <tr>
+                <th>Triprocessingmethod</th>
+                <td>{{ entity.triProcessingMethod }}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('trip') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('trip_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

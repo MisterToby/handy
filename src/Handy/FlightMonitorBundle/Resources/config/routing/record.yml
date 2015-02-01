@@ -1,0 +1,30 @@
+record:
+    path:     /
+    defaults: { _controller: "FlightMonitorBundle:Record:index" }
+
+record_show:
+    path:     /{id}/show
+    defaults: { _controller: "FlightMonitorBundle:Record:show" }
+
+record_new:
+    path:     /new
+    defaults: { _controller: "FlightMonitorBundle:Record:new" }
+
+record_create:
+    path:     /create
+    defaults: { _controller: "FlightMonitorBundle:Record:create" }
+    requirements: { _method: post }
+
+record_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "FlightMonitorBundle:Record:edit" }
+
+record_update:
+    path:     /{id}/update
+    defaults: { _controller: "FlightMonitorBundle:Record:update" }
+    requirements: { _method: post|put }
+
+record_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "FlightMonitorBundle:Record:delete" }
+    requirements: { _method: post|delete }

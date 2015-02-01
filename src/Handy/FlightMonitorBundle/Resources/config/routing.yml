@@ -1,0 +1,26 @@
+flight_monitor_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: FlightMonitorBundle:Default:index }
+    
+FlightMonitorBundle_airline:
+    resource: "@FlightMonitorBundle/Resources/config/routing/airline.yml"
+    prefix:   /airline
+
+FlightMonitorBundle_trip:
+        resource: "@FlightMonitorBundle/Resources/config/routing/trip.yml"
+        prefix:   /trip
+
+FlightMonitorBundle_record:
+        resource: "@FlightMonitorBundle/Resources/config/routing/record.yml"
+        prefix:   /record
+
+login:
+    path:     /login
+    defaults: { _controller: "FlightMonitorBundle:Security:login" }
+    
+login_check:
+    path:     /login_check
+    defaults: { _controller: "FlightMonitorBundle:Security:loginCheck" }
+
+logout:
+    path:     /logout

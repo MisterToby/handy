@@ -1,0 +1,40 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Airline</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Airname</th>
+                <td>{{ entity.airName }}</td>
+            </tr>
+            <tr>
+                <th>Airurl</th>
+                <td>{{ entity.airUrl }}</td>
+            </tr>
+            <tr>
+                <th>Airpost</th>
+                <td>{{ entity.airPost }}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('airline') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('airline_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

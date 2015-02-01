@@ -1,0 +1,30 @@
+airline:
+    path:     /
+    defaults: { _controller: "FlightMonitorBundle:Airline:index" }
+
+airline_show:
+    path:     /{id}/show
+    defaults: { _controller: "FlightMonitorBundle:Airline:show" }
+
+airline_new:
+    path:     /new
+    defaults: { _controller: "FlightMonitorBundle:Airline:new" }
+
+airline_create:
+    path:     /create
+    defaults: { _controller: "FlightMonitorBundle:Airline:create" }
+    requirements: { _method: post }
+
+airline_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "FlightMonitorBundle:Airline:edit" }
+
+airline_update:
+    path:     /{id}/update
+    defaults: { _controller: "FlightMonitorBundle:Airline:update" }
+    requirements: { _method: post|put }
+
+airline_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "FlightMonitorBundle:Airline:delete" }
+    requirements: { _method: post|delete }

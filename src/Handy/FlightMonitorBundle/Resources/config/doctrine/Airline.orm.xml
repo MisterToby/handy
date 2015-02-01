@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Handy\FlightMonitorBundle\Entity\Airline" table="airline">
+    <id name="id" type="integer" column="id">
+      <generator strategy="SEQUENCE"/>
+    </id>
+    <field name="airName" type="string" column="air_name" length="255" nullable="false"/>
+    <field name="airUrl" type="text" column="air_url" nullable="false"/>
+    <field name="airPost" type="boolean" column="air_post" nullable="false"/>
+  </entity>
+</doctrine-mapping>

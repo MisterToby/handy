@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Handy\FlightMonitorBundle\Entity\Trip" table="trip">
+    <indexes>
+      <index name="IDX_7656F53BD7F839FF" columns="tri_air_id"/>
+    </indexes>
+    <id name="id" type="integer" column="id">
+      <generator strategy="SEQUENCE"/>
+    </id>
+    <field name="triDescription" type="string" column="tri_description" length="255" nullable="false"/>
+    <field name="triFields" type="text" column="tri_fields" nullable="false"/>
+    <field name="triProcessingMethod" type="string" column="tri_processing_method" length="255" nullable="false"/>
+    <many-to-one field="triAir" target-entity="Airline">
+      <join-columns>
+        <join-column name="tri_air_id" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

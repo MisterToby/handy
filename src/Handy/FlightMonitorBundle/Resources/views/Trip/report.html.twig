@@ -1,0 +1,37 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/flightmonitor/css/main.css') }}" />
+    <h1>Record list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Lowest outbound price</th>
+                <th>Lowest inbound price</th>
+                <th>Record's date</th>
+                <th>Total</th>
+                <th>Id</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td>$ {{ entity.recLowestOutboundPrice | number_format(2, ',', '.') }}</td>
+                <td>$ {{ entity.recLowestInboundPrice | number_format(2, ',', '.') }}</td>
+                <td>$ {{ (entity.recLowestOutboundPrice + entity.recLowestInboundPrice) | number_format(2, ',', '.') }}</td>
+                <td>{% if entity.recDate %}{{ entity.recDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.id }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+        <a href="{{ path('trip') }}">
+            Back to the list
+        </a>
+    </li>
+    </ul>
+    {% endblock %}

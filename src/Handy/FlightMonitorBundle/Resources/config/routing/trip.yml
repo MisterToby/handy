@@ -32,4 +32,8 @@ trip_delete:
 trip_monitor:
     path:     /monitor
     defaults: { _controller: "FlightMonitorBundle:Trip:monitor" }
+    
+trip_report:
+    path:     /report/{id}
+    defaults: { _controller: "FlightMonitorBundle:Trip:report" }
 

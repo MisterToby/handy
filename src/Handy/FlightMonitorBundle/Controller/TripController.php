@@ -17,6 +17,23 @@ use \DateTime;
  *
  */
 class TripController extends Controller {
+    public function reportAction($id) {
+        $em = $this -> getDoctrine() -> getManager();
+
+        $entity = $em -> find('FlightMonitorBundle:Trip', $id);
+
+        $qb = $em -> createQueryBuilder();
+        $qb -> select('rec');
+        $qb -> from('FlightMonitorBundle:Record', 'rec');
+        $qb -> where("rec.recTri = $id");
+        $qb -> orderBy('rec.recDate');
+
+        $query = $qb -> getQuery();
+        $entities = $query -> getResult();
+
+        return $this -> render('FlightMonitorBundle:Trip:report.html.twig', array('entities' => $entities));
+    }
+
     public function processInternationalTripAvianca($response) {
         $startPattern = 'var generatedJSon = new String(\'';
         $index = strrpos($response, $startPattern) + strlen($startPattern);

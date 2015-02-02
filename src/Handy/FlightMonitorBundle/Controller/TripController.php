@@ -6,11 +6,17 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 
+use Doctrine\DBAL\Types\Type;
+
 use Handy\FlightMonitorBundle\Entity\Trip;
 use Handy\FlightMonitorBundle\Entity\Record;
 use Handy\FlightMonitorBundle\Form\TripType;
 
 use \DateTime;
+
+Type::overrideType('datetime', 'Doctrine\DBAL\Types\VarDateTimeType');
+Type::overrideType('datetimetz', 'Doctrine\DBAL\Types\VarDateTimeType');
+Type::overrideType('time', 'Doctrine\DBAL\Types\VarDateTimeType');
 
 /**
  * Trip controller.

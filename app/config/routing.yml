@@ -1,3 +1,7 @@
+ubiquitous_music:
+    resource: "@UbiquitousMusicBundle/Resources/config/routing.yml"
+    prefix:   /
+
 flight_monitor:
     resource: "@FlightMonitorBundle/Resources/config/routing.yml"
     prefix:   /

@@ -113,4 +113,60 @@ class MusicItem
     {
         return $this->muiIsDirectory;
     }
+    /**
+     * @var integer
+     */
+    private $muiBitrate;
+
+    /**
+     * @var float
+     */
+    private $muiPlaytime;
+
+
+    /**
+     * Set muiBitrate
+     *
+     * @param integer $muiBitrate
+     * @return MusicItem
+     */
+    public function setMuiBitrate($muiBitrate)
+    {
+        $this->muiBitrate = $muiBitrate;
+
+        return $this;
+    }
+
+    /**
+     * Get muiBitrate
+     *
+     * @return integer 
+     */
+    public function getMuiBitrate()
+    {
+        return $this->muiBitrate;
+    }
+
+    /**
+     * Set muiPlaytime
+     *
+     * @param float $muiPlaytime
+     * @return MusicItem
+     */
+    public function setMuiPlaytime($muiPlaytime)
+    {
+        $this->muiPlaytime = $muiPlaytime;
+
+        return $this;
+    }
+
+    /**
+     * Get muiPlaytime
+     *
+     * @return float 
+     */
+    public function getMuiPlaytime()
+    {
+        return $this->muiPlaytime;
+    }
 }

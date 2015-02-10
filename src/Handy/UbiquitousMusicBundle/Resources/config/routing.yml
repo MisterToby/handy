@@ -1,3 +1,7 @@
+index:
+    path:     /rest/index
+    defaults: { _controller: UbiquitousMusicBundle:Default:index }
+    
 index_music:
     path:     /index_music
     defaults: { _controller: UbiquitousMusicBundle:Default:indexMusic }

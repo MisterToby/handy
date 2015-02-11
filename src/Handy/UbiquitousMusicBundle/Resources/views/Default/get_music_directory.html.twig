@@ -5,7 +5,7 @@
         {% if item.muiIsDirectory %}
             <child id="{{ item.id }}" parent="{{ directory.id }}" title="{{ item.muiName }}" album="" artist="" isDir="true" coverArt="{{ item.id }}" created=""/>
         {% else %}
-            <child id="{{ item.id }}" parent="{{ directory.id }}" title="{{ item.muiName }}" album="" artist="" isDir="false" coverArt="{{ item.id }}" created="" starred="" duration="{{ item.muiPlaytime|round }}" bitRate="{{ item.muiBitrate|round }}" track="1" discNumber="" year="2010" genre="" size="10921851" suffix="mp3" contentType="audio/mpeg" isVideo="false" path="" albumId="" artistId="" type="music"/>
+            <child id="{{ item.id }}" parent="{{ directory.id }}" title="{{ item.muiName }}" album="" artist="" isDir="false" coverArt="{{ item.id }}" created="" starred="" duration="{{ item.muiPlaytime|round }}" bitRate="{{ item.muiBitrate|round }}" track="1" discNumber="" year="2010" genre="" size="{{ item.muiFileSize }}" suffix="mp3" contentType="audio/mpeg" isVideo="false" path="" albumId="" artistId="" type="music"/>
         {% endif %}
       {% endfor %}
   </directory>

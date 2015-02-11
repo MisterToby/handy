@@ -135,6 +135,7 @@ class DefaultController extends Controller {
                         $entity -> setMuiMuiParent($item['entity']);
                         $entity -> setMuiBitrate($id3Array['audio']['bitrate'] / 1000);
                         $entity -> setMuiPlaytime($id3Array['playtime_seconds']);
+                        $entity -> setMuiFileSize(filesize($newPath));
                         $em -> persist($entity);
                     }
                 }

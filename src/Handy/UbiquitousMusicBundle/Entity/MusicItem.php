@@ -169,4 +169,32 @@ class MusicItem
     {
         return $this->muiPlaytime;
     }
+    /**
+     * @var integer
+     */
+    private $muiFileSize;
+
+
+    /**
+     * Set muiFileSize
+     *
+     * @param integer $muiFileSize
+     * @return MusicItem
+     */
+    public function setMuiFileSize($muiFileSize)
+    {
+        $this->muiFileSize = $muiFileSize;
+
+        return $this;
+    }
+
+    /**
+     * Get muiFileSize
+     *
+     * @return integer 
+     */
+    public function getMuiFileSize()
+    {
+        return $this->muiFileSize;
+    }
 }

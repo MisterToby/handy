@@ -11,6 +11,7 @@
     <field name="muiIsDirectory" type="boolean" column="mui_is_directory" nullable="false"/>
     <field name="muiPlaytime" type="float" column="mui_playtime" precision="10" scale="0" nullable="true"/>
     <field name="muiBitrate" type="float" column="mui_bitrate" precision="10" scale="0" nullable="true"/>
+    <field name="muiFileSize" type="integer" column="mui_file_size" nullable="true"/>
     <many-to-one field="muiMuiParent" target-entity="MusicItem">
       <join-columns>
         <join-column name="mui_mui_id_parent" referenced-column-name="id"/>

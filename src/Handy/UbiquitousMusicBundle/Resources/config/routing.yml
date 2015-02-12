@@ -1,0 +1,32 @@
+index:
+    path:     /rest/index
+    defaults: { _controller: UbiquitousMusicBundle:Default:index }
+    
+index_music:
+    path:     /index_music
+    defaults: { _controller: UbiquitousMusicBundle:Default:indexMusic }
+
+get_music_folders:
+    path:     /rest/getMusicFolders.view
+    defaults: { _controller: UbiquitousMusicBundle:Default:getMusicFolders }
+    
+get_indexes:
+    path:     /rest/getIndexes.view
+    defaults: { _controller: UbiquitousMusicBundle:Default:getIndexes }
+
+get_starred:
+    path:     /rest/getStarred.view
+    defaults: { _controller: UbiquitousMusicBundle:Default:getStarred }
+    
+get_music_directory:
+    path:     /rest/getMusicDirectory.view
+    defaults: { _controller: UbiquitousMusicBundle:Default:getMusicDirectory }
+
+stream:
+    path:     /rest/stream.view
+    defaults: { _controller: UbiquitousMusicBundle:Default:stream }
+
+UbiquitousMusicBundle_musicitem:
+        resource: "@UbiquitousMusicBundle/Resources/config/routing/musicitem.yml"
+        prefix:   /musicitem
+

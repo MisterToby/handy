@@ -22,6 +22,10 @@ security:
         trip_monitor:
             pattern:  ^/trip/monitor$
             security: false
+
+	rest:
+            pattern:  ^/rest/
+            security: false
             
         login:
             pattern:  ^/login$
